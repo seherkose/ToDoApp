@@ -21,7 +21,6 @@ class RegisterPage: UIViewController {
         
     }
     
-    
     @IBAction func registerButtonAct(_ sender: Any) {
         if let nn = noteName.text {
             register(note_name: nn)

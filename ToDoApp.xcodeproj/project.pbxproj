@@ -16,6 +16,7 @@
 		9E99345F2A79446700B3DBAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E99345D2A79446700B3DBAB /* LaunchScreen.storyboard */; };
 		9E99346B2A79450A00B3DBAB /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99346A2A79450A00B3DBAB /* RegisterPage.swift */; };
 		9E99346D2A79451F00B3DBAB /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99346C2A79451F00B3DBAB /* DetailPage.swift */; };
+		9EBB328D2A7EE82B00265D38 /* NotHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB328C2A7EE82B00265D38 /* NotHucre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9E9934602A79446700B3DBAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E99346A2A79450A00B3DBAB /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
 		9E99346C2A79451F00B3DBAB /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
+		9EBB328C2A7EE82B00265D38 /* NotHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotHucre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		9E9934662A79448800B3DBAB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9EBB328B2A7EE7F900265D38 /* tableview */,
 				9E9934692A7944C500B3DBAB /* Views */,
 			);
 			path = UI;
@@ -106,6 +109,14 @@
 				9E99346C2A79451F00B3DBAB /* DetailPage.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9EBB328B2A7EE7F900265D38 /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				9EBB328C2A7EE82B00265D38 /* NotHucre.swift */,
+			);
+			path = tableview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 				9E99346B2A79450A00B3DBAB /* RegisterPage.swift in Sources */,
 				9E9934532A79446500B3DBAB /* AppDelegate.swift in Sources */,
 				9E99346D2A79451F00B3DBAB /* DetailPage.swift in Sources */,
+				9EBB328D2A7EE82B00265D38 /* NotHucre.swift in Sources */,
 				9E9934552A79446500B3DBAB /* SceneDelegate.swift in Sources */,
 				9E7459DD2A7A5BEE00520AC7 /* Notes.swift in Sources */,
 			);

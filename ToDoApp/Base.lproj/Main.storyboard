@@ -16,20 +16,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU7-oI-asl">
-                                <rect key="frame" x="163" y="408.66666666666669" width="67" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="detay"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="BvF-HT-bLT">
+                                <rect key="frame" x="0.0" y="163" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="buttonDetay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C1A-aG-Epk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hpY-Lq-Tm3"/>
                                 </connections>
-                            </button>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Emf-gF-c2Y">
+                                <rect key="frame" x="0.0" y="219" width="393" height="599"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notlarHucre" id="zhH-39-Gaq" customClass="NotHucre" customModule="ToDoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zhH-39-Gaq" id="qsU-hd-R3h">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="5gE-7P-ymI">
+                                                    <rect key="frame" x="16" y="25.666666666666671" width="59" height="49"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLG-Z1-vYD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwN-Wc-GiT">
+                                                            <rect key="frame" x="0.0" y="31" width="59" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5gE-7P-ymI" firstAttribute="centerY" secondItem="qsU-hd-R3h" secondAttribute="centerY" id="2at-0E-3pg"/>
+                                                <constraint firstItem="5gE-7P-ymI" firstAttribute="leading" secondItem="qsU-hd-R3h" secondAttribute="leading" constant="16" id="aey-I0-rVR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="notBaslik" destination="aLG-Z1-vYD" id="hag-Cj-JP5"/>
+                                            <outlet property="notTarih" destination="uwN-Wc-GiT" id="8ph-Iz-SzH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tU7-oI-asl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JBE-JI-H9P"/>
-                            <constraint firstItem="tU7-oI-asl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gbd-NG-CKU"/>
+                            <constraint firstItem="BvF-HT-bLT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4NL-Ed-oqp"/>
+                            <constraint firstItem="Emf-gF-c2Y" firstAttribute="top" secondItem="BvF-HT-bLT" secondAttribute="bottom" id="EnK-ML-Fqp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Emf-gF-c2Y" secondAttribute="trailing" id="I1q-ts-glm"/>
+                            <constraint firstItem="BvF-HT-bLT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PNF-1K-UAG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Emf-gF-c2Y" secondAttribute="bottom" id="S0T-Yg-JTA"/>
+                            <constraint firstItem="BvF-HT-bLT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="163" id="TWt-st-xq8"/>
+                            <constraint firstItem="Emf-gF-c2Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="acg-FG-iZk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Notes" id="HN3-Ud-jmp">
@@ -40,6 +85,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="notlarTableView" destination="Emf-gF-c2Y" id="Byq-aM-ju1"/>
+                        <outlet property="searchBar" destination="BvF-HT-bLT" id="Zmn-bw-WHr"/>
                         <segue destination="p5A-x8-FdY" kind="show" identifier="toDetail" id="yhL-fS-BMo"/>
                     </connections>
                 </viewController>
@@ -74,7 +121,7 @@
                                     <constraint firstAttribute="height" constant="230" id="8IJ-Ib-9qI"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -114,7 +161,7 @@
                                     <constraint firstAttribute="height" constant="230" id="JQS-eM-ats"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fc-Yc-dt6">

@@ -9,14 +9,14 @@ import UIKit
 
 class DetailPage: UIViewController {
 
-    
     @IBOutlet weak var noteNameDetail: UITextView!
-    
     @IBOutlet weak var guncelleButton: UIButton!
+    
     var note:Notes?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         noteNameDetail.layer.cornerRadius = 20
         guncelleButton.layer.cornerRadius = 20
@@ -34,7 +34,6 @@ class DetailPage: UIViewController {
         }
     }
 
-    
     func guncelle(note_id:Int, note_name: String){
         print("Not güncelle: \(note_id) - \(note_name)")
         
