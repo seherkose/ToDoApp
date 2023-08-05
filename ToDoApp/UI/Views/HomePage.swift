@@ -82,7 +82,7 @@ extension HomePage: UITableViewDelegate, UITableViewDataSource{
             alert.addAction(iptalAction)
             
             let evetAction = UIAlertAction(title: "Evet", style: .destructive){action in
-                print("Notu sil: \(note.note_id!)")
+                print("Not Sil: \(note.note_id!)")
                 
             }
             
