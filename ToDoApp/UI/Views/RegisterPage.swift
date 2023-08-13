@@ -8,6 +8,8 @@
 import UIKit
 
 class RegisterPage: UIViewController {
+    
+    var viewModel = RegisterPageViewModel()
 
     
     @IBOutlet weak var noteName: UITextView!
@@ -23,16 +25,10 @@ class RegisterPage: UIViewController {
     
     @IBAction func registerButtonAct(_ sender: Any) {
         if let nn = noteName.text {
-            register(note_name: nn)
+            viewModel.register(note_name: nn)
         }
 
     }
-    
-    func register(note_name:String){
-        print("Not kaydet : \(note_name)")
-        
-    }
-    
 
 }
 

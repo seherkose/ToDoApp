@@ -13,6 +13,8 @@ class HomePage: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var notlarListesi = [Notes]()
+    var viewModel = HomePageViewModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +22,14 @@ class HomePage: UIViewController {
         notlarTableView.delegate = self
         notlarTableView.dataSource = self
         
-       let n1 = Notes(note_id: 1, note_name: "Doğum Günü", note_date: "25/06/1999")
-       let n2 = Notes(note_id: 1, note_name: "Alınacaklar Listesi", note_date: "05/09/2023")
-       let n3 = Notes(note_id: 1, note_name: "Ödev Deadline", note_date: "07/09/2023")
-        
-        notlarListesi.append(n1)
-        notlarListesi.append(n2)
-        notlarListesi.append(n3)
+        _ = viewModel.noteList.subscribe(onNext: { nList in
+            self.notlarListesi = nList
+            self.notlarTableView.reloadData()
+        })
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.notlariYukle()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,7 +46,8 @@ class HomePage: UIViewController {
 }
 extension HomePage: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print ("NOT ARA: \(searchText)")
+        //print ("NOT ARA: \(searchText)")
+        viewModel.ara(aramaKelimesi: searchText)
     }
     
 }
@@ -75,15 +78,14 @@ extension HomePage: UITableViewDelegate, UITableViewDataSource{
         let silAction = UIContextualAction(style: .destructive, title: "Sil") {contexualAction,view,bool in
             let note = self.notlarListesi[indexPath.row]
            
-            
             let alert = UIAlertController(title: "SİLME İŞLEMİ", message: "\(note.note_name!) silinsin mi?", preferredStyle: .alert)
             
             let iptalAction = UIAlertAction(title: "İptal", style: .cancel)
             alert.addAction(iptalAction)
             
             let evetAction = UIAlertAction(title: "Evet", style: .destructive){action in
-                print("Not Sil: \(note.note_id!)")
-                
+                //print("Not Sil: \(note.note_id!)")
+                self.viewModel.sil(note_id: note.note_id!)
             }
             
             alert.addAction(evetAction)
