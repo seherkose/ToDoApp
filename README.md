@@ -1,6 +1,8 @@
 # ToDoApp
 UP School &amp; Akbank Hard Skills-HW5 &amp; HW6 &amp; HW7 
 
+A simple iOS to-do app, created with the MVVM pattern, demonstrates a search bar and table view. The app allows users to create, view, and search through tasks.
+
 
 <img width="429" alt="1" src="https://github.com/seherkose/ToDoApp/assets/86297425/19a819ac-1101-41f0-b5ff-714c4c7ea7b9">
 <img width="429" alt="2 2" src="https://github.com/seherkose/ToDoApp/assets/86297425/cb996cfa-51b7-4cd2-a03c-697d0202cee1">
