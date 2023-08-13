@@ -32,9 +32,9 @@ class NotesDaoRepository{
         
         var nList = [Notes]()
 
-        let n1 = Notes(note_id: 1, note_name: "Doğum Günü", note_date: "25/06/1999")
-        let n2 = Notes(note_id: 1, note_name: "Alınacaklar Listesi", note_date: "05/09/2023")
-        let n3 = Notes(note_id: 1, note_name: "Ödev Deadline", note_date: "07/09/2023")
+        let n1 = Notes(note_id: 1, note_name: "Birthday", note_date: "25/06/1999")
+        let n2 = Notes(note_id: 1, note_name: "Bucket List", note_date: "05/09/2023")
+        let n3 = Notes(note_id: 1, note_name: "Deadline", note_date: "07/09/2023")
         
         nList.append(n1)
         nList.append(n2)
