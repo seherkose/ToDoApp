@@ -15,6 +15,7 @@ class HomePageViewModel{
     var noteList = BehaviorSubject<[Notes]>(value: [Notes]())
     
     init(){
+        veritabaniKopyala()
         noteList = nrepo.noteList
     }
     
@@ -29,6 +30,28 @@ class HomePageViewModel{
     
     func notlariYukle(){
         nrepo.notlariYukle()
+    }
+    
+    func veritabaniKopyala(){
+        let bundleYolu = Bundle.main.path(forResource: "toDo", ofType: ".sqlite")
+        
+        let dosyaYolu = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let veritabaniURL = URL(fileURLWithPath: dosyaYolu).appendingPathComponent("toDo.sqlite")
+        
+        let fm = FileManager.default
+        
+        if fm.fileExists(atPath: veritabaniURL.path()){
+            print("Veritabanı zaten var")
+        }else{
+            do{
+                try fm.copyItem(atPath: bundleYolu!, toPath: veritabaniURL.path)
+            }catch{
+                print(error.localizedDescription)
+            }
+        }
+        
+        
+        
     }
     
 }

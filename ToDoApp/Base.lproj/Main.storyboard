@@ -35,17 +35,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="5gE-7P-ymI">
-                                                    <rect key="frame" x="15.999999999999996" y="10.333333333333332" width="63.666666666666657" height="54.666666666666671"/>
+                                                    <rect key="frame" x="15.999999999999996" y="-5.3333333333333357" width="63.666666666666657" height="85.666666666666686"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLG-Z1-vYD">
-                                                            <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="34.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="34.666666666666664"/>
+                                                            <color key="tintColor" red="0.73333334920000004" green="0.79607844350000001" blue="0.90980386729999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.27843138579999999" green="0.32941177490000001" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwN-Wc-GiT">
-                                                            <rect key="frame" x="0.0" y="35.333333333333329" width="63.666666666666664" height="19.333333333333329"/>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwN-Wc-GiT">
+                                                            <rect key="frame" x="0.0" y="35.666666666666664" width="63.666666666666664" height="49.999999999999993"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -94,7 +95,7 @@
             </objects>
             <point key="canvasLocation" x="749" y="-201"/>
         </scene>
-        <!--Register Page-->
+        <!--Add-->
         <scene sceneID="HAf-Yr-Nak">
             <objects>
                 <viewController id="itH-yg-RDg" customClass="RegisterPage" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,7 +109,7 @@
                                 <color key="tintColor" red="0.99215686274509807" green="0.89803921568627454" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="KAYDET">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="registerButtonAct:" destination="itH-yg-RDg" eventType="touchUpInside" id="tx6-yn-j8N"/>
@@ -120,8 +121,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="8IJ-Ib-9qI"/>
                                 </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.27843138579999999" green="0.32941177490000001" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -136,7 +137,7 @@
                             <constraint firstItem="LoY-s7-rpA" firstAttribute="trailing" secondItem="BdD-zT-0Y7" secondAttribute="trailing" constant="50" id="yzj-y5-Q4e"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aIm-FH-RPz"/>
+                    <navigationItem key="navigationItem" title="Add" id="aIm-FH-RPz"/>
                     <connections>
                         <outlet property="noteName" destination="BdD-zT-0Y7" id="lrZ-RB-aGv"/>
                         <outlet property="registerButton" destination="Wyy-uY-10f" id="Ggl-yz-2mz"/>
@@ -144,9 +145,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ria-Os-fsO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562.5954198473282" y="-297.18309859154931"/>
+            <point key="canvasLocation" x="1602" y="-201"/>
         </scene>
-        <!--Detail Page-->
+        <!--Detail-->
         <scene sceneID="R7S-BO-qg2">
             <objects>
                 <viewController id="p5A-x8-FdY" customClass="DetailPage" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -160,8 +161,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="JQS-eM-ats"/>
                                 </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.27843138579999999" green="0.32941177490000001" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fc-Yc-dt6">
@@ -170,7 +171,7 @@
                                 <color key="tintColor" red="0.99215686274509807" green="0.89803921568627454" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="GÜNCELLE">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="guncelleButtonAct:" destination="p5A-x8-FdY" eventType="touchUpInside" id="1vN-mb-egz"/>
@@ -188,7 +189,7 @@
                             <constraint firstItem="1fc-Yc-dt6" firstAttribute="top" secondItem="MJY-jh-xXt" secondAttribute="bottom" constant="70" id="e9j-YW-jfc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HaN-Kx-KDY"/>
+                    <navigationItem key="navigationItem" title="Detail" id="HaN-Kx-KDY"/>
                     <connections>
                         <outlet property="guncelleButton" destination="1fc-Yc-dt6" id="7xx-rq-5mr"/>
                         <outlet property="noteNameDetail" destination="MJY-jh-xXt" id="QeO-YM-Zkm"/>
@@ -196,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JW-pS-lEg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1563" y="528"/>
+            <point key="canvasLocation" x="1602" y="539"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7cU-ks-7nx">
@@ -206,6 +207,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="tRE-eO-vg0">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.27843138579999999" green="0.32941177490000001" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.27843138579999999" green="0.32941177490000001" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.27843138579999999" green="0.32941177490000001" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -218,9 +226,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

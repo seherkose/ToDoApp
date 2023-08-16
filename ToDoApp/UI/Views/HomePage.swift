@@ -61,7 +61,7 @@ extension HomePage: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "notlarHucre") as! NotHucre
         
         cell.notBaslik.text = note.note_name
-        cell.notTarih.text = note.note_date
+        //cell.notTarih.text = note.note_date
         
         return cell
     }
