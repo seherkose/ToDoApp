@@ -1,5 +1,5 @@
 # ToDoApp
-UP School &amp; Akbank Hard Skills - To Do App
+UP School &amp; Akbank Hard Skills-To Do App
 
 A simple iOS to-do app, created with the MVVM design pattern, demonstrates a UISearchBar and UITableView. The app allows users to create, view, delete, and search through tasks with SQLite.
 
